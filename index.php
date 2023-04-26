@@ -78,7 +78,7 @@
         </div>
     <?php
     $connection = new PDO('mysql:host=localhost;dbname=Shop_Lb1','root','');
-    class Item {
+    class Bike {
         //atributes
         private $bike_name;
         private $category;
@@ -171,7 +171,7 @@
      global $store;
      $store = array();
      foreach ($connection->query($sql) as $row) {
-         $store[] = new Item ($row['bike_name'],$row['category_id'],$row['vendor_id'],$row['bike_price'],$row['model_year'],$row['bike_groopset']);
+         $store[] = new Bike ($row['bike_name'],$row['category_id'],$row['vendor_id'],$row['bike_price'],$row['model_year'],$row['bike_groopset']);
      }
 
  }
